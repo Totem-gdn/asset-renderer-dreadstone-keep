@@ -1,7 +1,6 @@
 'use strict'
 
-const path = require('path');
-const nftHelper = require('../../helpers/nft')
+const nftHelper = require('../../helpers/dna-parser')
 
 class NFTController {
   async get (req, res, next) {
