@@ -17,6 +17,7 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.19",
     "sharp": "^0.31.0",
+    "totem-dna-parser": "github:Totem-gdn/totem-dna-parser",
     "web3": "^1.8.0"
   }
 }
