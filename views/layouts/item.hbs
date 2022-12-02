@@ -1,0 +1,412 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="{{width}}" height="{{height}}" viewBox="0 0 400 350"
+    preserveAspectRatio="xMidYMid meet">
+
+       <defs>
+        <filter id="sofGlow" height="350%" width="350%" x="-75%" y="-75%">
+            <!-- Thicken out the original shape -->
+            <feMorphology operator="dilate" radius="1" in="SourceAlpha" result="thicken" />
+
+            <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+            <feGaussianBlur in="thicken" stdDeviation="40" result="blurred" />
+
+            <!-- Change the colour -->
+            <feFlood flood-color="#5823C9" result="glowColor" flood-opacity=".5" />
+
+            <!-- Color in the glows -->
+            <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+            <!--	Layer the effects together -->
+            <feMerge>
+                <feMergeNode in="softGlow_colored" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+
+        </filter>
+    </defs>
+
+
+    <g filter="url(#sofGlow)">
+        
+
+
+    {{#ifeq weapon_type 'Axe'}}
+    {{#ifeq weapon_material 'Bone'}}
+    <defs>
+        <style>
+            .axe-bone-1 {
+                fill: #bfad80;
+            }
+
+            .axe-bone-2 {
+                fill: #dbd2ba;
+            }
+
+            .axe-bone-3 {
+                fill: #cab98e;
+            }
+
+            .axe-bone-4 {
+                fill: #a6956c;
+            }
+
+            .axe-bone-5 {
+                fill: #292620;
+            }
+        </style>
+    </defs>
+    <g transform="translate(40, 35)">
+        <path class="axe-bone-1"
+            d="M249.85,115.05v30h10v10h-20c0,2,0,3.6,0,5.24s.11,3.18.16,4.74h19.8v20h-20V175h-10V165h-10V155H189.94V145h10V135h10v9.74H230v-9.62c3.37-.35,6.65.17,9.82-.33V115.05Z" />
+        <polygon class="axe-bone-2"
+            points="189.94 135.03 189.94 145.01 169.97 145.01 169.97 154.99 150 154.99 150 145.01 159.98 145.01 159.98 135.03 189.94 135.03" />
+        <path class="axe-bone-1" d="M209.91,105.07h10v10h-10v10h-10v-20Z" />
+        <path class="axe-bone-3" d="M150,145v10H120.05V145Z" />
+        <path class="axe-bone-2" d="M90.1,165V155h30v10Z" />
+        <path class="axe-bone-3" d="M70.13,175h-30V165h30Z" />
+        <path class="axe-bone-4" d="M199.92,105.07v20h-10v-20Z" />
+        <path class="axe-bone-2" d="M249.85,115.05h-20v-10h20Z" />
+        <path class="axe-bone-4" d="M189.94,155h20v10h-20Z" />
+        <path class="axe-bone-3" d="M259.83,165H240c-.05-1.56-.13-3.15-.16-4.74s0-3.28,0-5.24h20Z" />
+        <path class="axe-bone-2" d="M70.13,175V165h20v10Z" />
+        <path class="axe-bone-4" d="M219.89,165h10v10h-20V165Z" />
+        <path class="axe-bone-4" d="M239.86,184.94h20v10h-20Z" />
+        <path class="axe-bone-1" d="M189.94,105.07v-10h10v10Z" />
+        <rect class="axe-bone-4" x="179.95" y="145.01" width="9.99" height="9.98" />
+        <path class="axe-bone-3" d="M199.92,105.07v-10h10v10Z" />
+        <path class="axe-bone-5" d="M229.88,105.07v10h-10v-10Z" />
+        <path class="axe-bone-5" d="M189.94,135H180V125h10Z" />
+        <path class="axe-bone-1" d="M160,135v10H150V135Z" />
+        <path class="axe-bone-4" d="M229.88,175h10v10h-10Z" />
+        <path class="axe-bone-3" d="M259.83,184.94V175h10v10Z" />
+        <path class="axe-bone-3" d="M259.83,145h-10V135h10Z" />
+        <path class="axe-bone-1" d="M259.83,184.94h10v10h-10Z" />
+        <path class="axe-bone-3" d="M239.86,125v9.77c-3.17.5-6.45,0-9.82.33v9.62H209.91V125h30Z" />
+        <path class="axe-bone-2" d="M209.91,125v10h-20V125h20Z" />
+        <path class="axe-bone-3" d="M219.89,165h-10V155h10Z" />
+        <path class="axe-bone-5" d="M239.86,125h-10v-10h10Z" />
+        <path class="axe-bone-5" d="M189.94,135h10v10h-10Z" />
+        <path class="axe-bone-2" d="M229.88,115.05v10h-20v-10h20Z" />
+        <path class="axe-bone-4" d="M180,105.07v-10h10v10Z" />
+        <path class="axe-bone-4" d="M259.83,204.92v-10h10v10Z" />
+        <path class="axe-bone-2" d="M30.19,175V165h10v10Z" />
+    </g>
+    {{/ifeq}}
+    {{#ifeq weapon_material 'Flint'}}
+    <defs>
+        <style>
+            .axe-flint-1 {
+                fill: #c9cac2;
+            }
+
+            .axe-flint-2 {
+                fill: #acae9f;
+            }
+
+            .axe-flint-3 {
+                fill: #f8d3aa;
+            }
+
+            .axe-flint-4 {
+                fill: #9f9f9f;
+            }
+
+            .axe-flint-5 {
+                fill: #7a7977;
+            }
+
+            .axe-flint-6 {
+                fill: #d2a07d;
+            }
+        </style>
+    </defs>
+    <g transform="translate(50, 40)">
+        <polygon class="axe-flint-1"
+            points="269.91 123.54 269.91 133.52 259.92 133.52 259.92 143.51 239.95 143.51 239.95 153.49 229.97 153.49 229.97 163.48 210 163.48 210 173.46 200.02 173.46 200.02 163.48 190.03 163.48 190.03 153.49 180.05 153.49 180.05 133.52 190.03 133.52 190.03 123.54 200.02 123.54 200.02 113.55 210 113.55 210 103.57 219.98 103.57 219.98 93.58 239.95 93.58 239.95 113.47 249.84 113.47 249.84 123.54 269.91 123.54" />
+        <path class="axe-flint-1" d="M180.05,83.6V73.72H190V83.5h9.93V93.59H210v10H200v10H190v-20h-10Z" />
+        <path class="axe-flint-2"
+            d="M181.92,196.3h9.77c.5,3.18,0,6.45.35,10h9.84v9.45a2.82,2.82,0,0,1-.33.36.84.84,0,0,1-.42.16h-19v9.78c-6.71.44-13.25.08-20,.23v-9.81c3-.52,6.25.05,9.63-.33v-9.62c3.35-.52,6.62,0,10.16-.37Z" />
+        <path class="axe-flint-2" d="M180.05,93.59h10v30h-10Z" />
+        <path class="axe-flint-3" d="M160.08,123.54h10v20h-20v-10h10Z" />
+        <path class="axe-flint-4" d="M80.21,153.49v-10h30v10Z" />
+        <path class="axe-flint-5" d="M20.31,163.48v-10H50.25v10Z" />
+        <path class="axe-flint-4" d="M50.25,163.48v-10h30v10Z" />
+        <path class="axe-flint-2" d="M269.91,133.52V113.66h9.78v19.86Z" />
+        <path class="axe-flint-5" d="M170.07,133.52v-10h20v10h-20Z" />
+        <path class="axe-flint-4" d="M110.16,143.51v-10h20v10Z" />
+        <path class="axe-flint-5" d="M130.13,143.51v-10h20v10Z" />
+        <path class="axe-flint-2" d="M170.07,133.52h10v20h-10v-20Z" />
+        <path class="axe-flint-2" d="M240,153.49v-10h20v10Z" />
+        <path class="axe-flint-2" d="M210,173.46v-10h20v10Z" />
+        <path class="axe-flint-2" d="M170.06,93.59v-10h10v10Z" />
+        <path class="axe-flint-5" d="M210,103.57v-10h10v10Z" />
+        <path class="axe-flint-6" d="M160.08,123.54v10h-10v-10Z" />
+        <path class="axe-flint-2" d="M259.92,143.51v-10h10v10Z" />
+        <path class="axe-flint-2" d="M180.05,153.49h10v10h-10Z" />
+        <path class="axe-flint-2" d="M230,163.48v-10h10v10Z" />
+        <path class="axe-flint-5" d="M200,113.56v-10h10v10Z" />
+        <path class="axe-flint-5" d="M190,123.54v-10h10v10Z" />
+        <path class="axe-flint-5" d="M230,93.58v-10h10v10Z" />
+        <path class="axe-flint-2" d="M180.05,183.46v-10H210v10Z" />
+        <path class="axe-flint-2" d="M170.25,193.44v-10H190v10Z" />
+        <path class="axe-flint-2" d="M190,173.46v-10h10v10Z" />
+    </g>
+    {{/ifeq}}
+    {{#ifeq weapon_material 'Obsidian'}}
+    <defs>
+        <style>
+            .axe-obsidian-1 {
+                fill: #230f2d;
+            }
+
+            .axe-obsidian-2 {
+                fill: #fbd3aa;
+            }
+
+            .axe-obsidian-3 {
+                fill: #6a636d;
+            }
+
+            .axe-obsidian-4 {
+                fill: #100a12;
+            }
+
+            .axe-obsidian-5 {
+                fill: #ae503b;
+            }
+        </style>
+    </defs>
+    <g transform="translate(50, 15)">
+        <path class="axe-obsidian-1"
+            d="M179.77,169.85h-10v-10h20v-10H229.6c0,2.08.07,4.18.09,6.28,0,2.32,0,4.65,0,7v6.58h9.88v10h10V170h20v9.88h-10v10H229.69v10H189.75v-30Z" />
+        <path class="axe-obsidian-2" d="M159.8,169.85v10h-20v-20h20Z" />
+        <path class="axe-obsidian-3" d="M189.75,199.8h39.94v10H189.75Z" />
+        <path class="axe-obsidian-3" d="M189.75,209.79v9.83c-6.52.32-13.06.11-19.6.14s-13.23,0-20.09,0v-10h39.69Z" />
+        <path class="axe-obsidian-4" d="M189.75,149.88v-10h30v10Z" />
+        <path class="axe-obsidian-5" d="M139.83,169.85v10h-30v-10Z" />
+        <path class="axe-obsidian-4" d="M179.77,169.85h10v30h-10Z" />
+        <path class="axe-obsidian-5" d="M109.88,179.83v10h-30v-10Z" />
+        <path class="axe-obsidian-3" d="M229.69,199.8v-10h29.95v10Z" />
+        <path class="axe-obsidian-1" d="M179.77,199.8h10v10H159.8v-10Z" />
+        <path class="axe-obsidian-1" d="M189.62,99.8h-9.76V80.2h9.76Z" />
+        <path class="axe-obsidian-4" d="M179.77,149.88h10v10h-20v-10Z" />
+        <rect class="axe-obsidian-3" x="259.65" y="179.84" width="20.12" height="9.98" />
+        <path class="axe-obsidian-5" d="M159.8,169.85v-10h10v10Z" />
+        <path class="axe-obsidian-1" d="M199.68,119.83V100h-9.93v29.75h-10v20.17h10v-10h20V119.83Z" />
+        <path class="axe-obsidian-5" d="M20.23,199.86v-10H79.92v10Z" />
+    </g>
+    {{/ifeq}}
+    {{#ifeq weapon_material 'Wood'}}
+    <defs>
+        <style>
+            .axe-wood-1 {
+                fill: #632f13;
+            }
+
+            .axe-wood-2 {
+                fill: #fbd3aa;
+            }
+
+            .axe-wood-3 {
+                fill: #4a4745;
+            }
+
+            .axe-wood-4 {
+                fill: #848484;
+            }
+
+            .axe-wood-5 {
+                fill: #666;
+            }
+        </style>
+    </defs>
+    <g transform="translate(45, 40)">
+        <path class="axe-wood-1" d="M85.1,155.08v10H25.3v-10Z" />
+        <path class="axe-wood-2" d="M174.85,135.06v10h-20v-20h20Z" />
+        <path class="axe-wood-1" d="M154.88,135.06v10H115v-10Z" />
+        <path class="axe-wood-1" d="M224.77,115.09v10h-30v-10Z" />
+        <path class="axe-wood-1" d="M115,145v10H85V145Z" />
+        <path class="axe-wood-1" d="M174.85,135.06v-10h20v10h-20Z" />
+        <path class="axe-wood-3" d="M194.82,145h10v20h-10Z" />
+        <path class="axe-wood-4" d="M244.74,175V165h20v10Z" />
+        <path class="axe-wood-4" d="M224.77,175h20v10h-20Z" />
+        <path class="axe-wood-3" d="M184.84,135.06h10v10h-10Z" />
+        <path class="axe-wood-3" d="M204.81,165h10v10h-10Z" />
+        <path class="axe-wood-3" d="M224.77,175v10h-10V175Z" />
+        <path class="axe-wood-4" d="M264.72,155h10v10h-10Z" />
+        <path class="axe-wood-5"
+            d="M244.74,115.09v10.29c3.18.51,6.62.09,10,.44v19.49c3.34.54,6.44-.5,10-.14V165h-20v10h-30V165h-10V145h-10v-20h30v-10Z" />
+        <path class="axe-wood-5" d="M254.73,145h10v10h-10Z" />
+        <path class="axe-wood-5" d="M244.74,125.13h10v10h-10Z" />
+        <path class="axe-wood-4" d="M214.79,184.93h10v10h-10Z" />
+        <path class="axe-wood-1" d="M244.74,105.08v10h-20v-10Z" />
+    </g>
+    {{/ifeq}}
+    {{/ifeq}}
+
+    {{#ifeq weapon_type 'Dagger'}}
+    {{#ifeq weapon_material 'Bone'}}
+    <defs>
+        <style>
+            .dagger-bone-1 {
+                fill: #bfad80;
+            }
+
+            .dagger-bone-2 {
+                fill: #a6956c;
+            }
+
+            .dagger-bone-3 {
+                fill: #fbd3aa;
+            }
+
+            .dagger-bone-4 {
+                fill: #dbd2ba;
+            }
+
+            .dagger-bone-5 {
+                fill: #c9c2ad;
+            }
+        </style>
+    </defs>
+    <g transform="translate(35, 35)">
+        <path class="dagger-bone-1" d="M199.93,180V140.09h10V180Z" />
+        <polygon class="dagger-bone-2"
+            points="209.91 140.09 199.93 140.09 199.93 120.13 199.94 116.14 199.93 110.05 209.92 110.05 209.91 140.09" />
+        <rect class="dagger-bone-3" x="189.94" y="120.12" width="9.99" height="19.97" />
+        <path class="dagger-bone-4" d="M209.91,150.08h10v10h-10Z" />
+        <path class="dagger-bone-5" d="M209.91,160.06h10v10h-10Z" />
+        <path class="dagger-bone-5" d="M219.9,140.09h-10v10h10Z" />
+        <path class="dagger-bone-4" d="M219.9,170.05h-10v10h10Z" />
+        <path class="dagger-bone-4" d="M199.93,180h10c0,1.66,0,9.92,0,9.92h-10Z" />
+        <path class="dagger-bone-1" d="M150.09,140.09H110.15v10h39.94Z" />
+        <polygon class="dagger-bone-2"
+            points="110.15 150.08 110.15 140.09 90.18 140.09 86.19 140.1 80.1 140.09 80.1 150.08 110.15 150.08" />
+        <rect class="dagger-bone-3" x="90.18" y="140.09" width="9.98" height="9.99" />
+        <path class="dagger-bone-4" d="M120.13,150.08v10h10v-10Z" />
+        <path class="dagger-bone-5" d="M130.12,150.08v10h10v-10Z" />
+        <path class="dagger-bone-5" d="M110.14,160.06v-10h10v10Z" />
+        <path class="dagger-bone-4" d="M140.1,160.06v-10h10v10Z" />
+        <path class="dagger-bone-4" d="M150.09,140.09v10H160v-10Z" />
+    </g>
+    {{/ifeq}}
+    {{#ifeq weapon_material 'Flint'}}
+    <defs>
+        <style>
+            .dagger-flint-1 {
+                fill: #acae9f;
+            }
+
+            .dagger-flint-2 {
+                fill: #c9cac2;
+            }
+
+            .dagger-flint-3 {
+                fill: #fbd3aa;
+            }
+
+            .dagger-flint-4 {
+                fill: #b51616;
+            }
+        </style>
+    </defs>
+    <g transform="translate(35, 35)">
+        <path class="dagger-flint-1" d="M200,155V145H190V135h30v10H210v10Z" />
+        <path class="dagger-flint-2" d="M200,155h10v39.94H200Z" />
+        <path class="dagger-flint-3" d="M200,135H190v-20h10Z" />
+        <path class="dagger-flint-4" d="M200,135v-20h10v20Z" />
+        <path class="dagger-flint-1" d="M189.85,145.15v19.7h-9.64v-19.7Z" />
+        <path class="dagger-flint-1" d="M220.07,145.15h9.76v19.61h-9.76Z" />
+        <path class="dagger-flint-1" d="M210,115.05H200v-10l10,0Z" />
+        <path class="dagger-flint-1" d="M120.1,145.06h-10v10h-10V125.09h10v10h10Z" />
+        <path class="dagger-flint-2" d="M120.11,145.06v-10h39.94v10Z" />
+        <path class="dagger-flint-4" d="M90.23,145.06H80.16v-10H90.23Z" />
+        <path class="dagger-flint-1" d="M110.27,155.18H130v9.64H110.27Z" />
+        <path class="dagger-flint-1" d="M110.27,125V115.2h19.6V125Z" />
+        <path class="dagger-flint-1" d="M80.16,135.07v10h-10l0-10Z" />
+    </g>
+    {{/ifeq}}
+    {{#ifeq weapon_material 'Obsidian'}}
+    <defs>
+        <style>
+            .dagger-obsidian-1 {
+                fill: #fbd3aa;
+            }
+
+            .dagger-obsidian-2 {
+                fill: #230f2d;
+            }
+
+            .dagger-obsidian-3 {
+                fill: #926e30;
+            }
+
+            .dagger-obsidian-4 {
+                fill: #ae833b;
+            }
+
+            .dagger-obsidian-5 {
+                fill: #6a636d;
+            }
+        </style>
+    </defs>
+    <g transform="translate(35, 35)">
+        <path class="dagger-obsidian-1" d="M204.91,130h-10v-20h10Z" />
+        <path class="dagger-obsidian-2" d="M214.91,180v10h-10V140h20v20h-10Z" />
+        <path class="dagger-obsidian-3" d="M204.93,130v-20h10v20Z" />
+        <path class="dagger-obsidian-4" d="M204.93,130h20v10h-20Z" />
+        <path class="dagger-obsidian-5" d="M214.91,180V160h10v20Z" />
+        <path class="dagger-obsidian-2" d="M214.91,110.06h-10v-10h10Z" />
+        <path class="dagger-obsidian-5" d="M214.91,199.93h-10v-10h10Z" />
+        <path class="dagger-obsidian-2" d="M155,140h10V130H115.05v20h20V140Z" />
+        <path class="dagger-obsidian-3" d="M95.08,130h-10v10h10Z" />
+        <path class="dagger-obsidian-4" d="M105.06,130v20h10V130Z" />
+        <path class="dagger-obsidian-5" d="M155,140H135v10h20Z" />
+        <path class="dagger-obsidian-2" d="M85.09,140V130h-10v10Z" />
+        <path class="dagger-obsidian-5" d="M175,140V130H165v10Z" />
+    </g>
+    {{/ifeq}}
+    {{#ifeq weapon_material 'Wood'}}
+    <defs>
+        <style>
+            .dagger-wood-1 {
+                fill: #fbd3aa;
+            }
+
+            .dagger-wood-2 {
+                fill: #41200e;
+            }
+
+            .dagger-wood-3 {
+                fill: #632f13;
+            }
+
+            .dagger-wood-4 {
+                fill: #9c782b;
+            }
+
+            .dagger-wood-5 {
+                fill: #c8a14e;
+            }
+        </style>
+    </defs>
+    <g transform="translate(40, 35)">
+        <path class="dagger-wood-1" d="M189,135H180.3v-20H189Z" />
+        <path class="dagger-wood-2" d="M189,135v-20h8.66v20Z" />
+        <path class="dagger-wood-3" d="M189,135h17.32v10H189Z" />
+        <path class="dagger-wood-3" d="M206.42,134.88v-9.74h8.35v9.74Z" />
+        <path class="dagger-wood-4" d="M189,145h8.66v10H189Z" />
+        <path class="dagger-wood-5" d="M197.63,185H189V155h8.66Z" />
+        <path class="dagger-wood-2" d="M93.52,135H85.23v10h8.29Z" />
+        <path class="dagger-wood-3" d="M102.56,135v20h8.66V135Z" />
+        <path class="dagger-wood-3" d="M102.43,155.13H94v9.63h8.45Z" />
+        <path class="dagger-wood-4" d="M111.22,135v10h8.66V135Z" />
+        <path class="dagger-wood-5" d="M145.88,145V135h-26v10Z" />
+    </g>
+    {{/ifeq}}
+    {{/ifeq}}
+
+
+    </g>
+</svg>
