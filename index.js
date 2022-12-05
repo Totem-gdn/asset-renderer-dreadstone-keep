@@ -34,5 +34,5 @@ const host = process.env.host || '0.0.0.0'
 const port = process.env.port || 3000
 
 server.listen(port, host, () => {
-  console.log(`Express TEST server available at http://${host}:${port}`)
+  console.log(`Express server available at http://${host}:${port}`)
 })
