@@ -1,5 +1,7 @@
 'use strict'
 const { DNAParser, ContractHandler } = require('totem-dna-parser')
+const totemCommonFiles = require('totem-common-files')
+
 
 class NFT {
   constructor() {
@@ -15,7 +17,12 @@ class NFT {
 
       const contractHandler = new ContractHandler(this.ApiURL, this.Contracts[type]);
       const dna = await contractHandler.getDNA(id);
-      const parser = new DNAParser(DNAParser.defaultAvatarJson, dna);
+      let parser;
+      if (type === 'avatar') {
+        parser = new DNAParser(totemCommonFiles.totemAvatarDreadstoneKeepFilterJson, dna);
+      } else if (type === 'item') {
+        parser = new DNAParser(totemCommonFiles.totemItemDreadstoneKeepFilterJson, dna);
+      }
       const properties = parser.getFilterPropertiesList()
       let jsonProp = {...properties};
       let settings = {};
@@ -24,8 +31,7 @@ class NFT {
           settings[jsonProp[key]] = parser.getField(properties[key]);
         }
       }
-
-      return this.generateAvatarJson(settings);
+      return type === 'avatar' ? this.generateAvatarJson(settings) : settings;
     } catch (e) {
       console.log(e)
     }

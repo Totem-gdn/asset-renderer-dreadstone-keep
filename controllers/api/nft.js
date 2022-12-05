@@ -9,19 +9,16 @@ class NFTController {
     if (!type || !id) {
       res.status(404).json({ error: 'Wrong format' })
     }
-
-    if (type === 'avatar') {
+    if (type) {
       const nft = await nftHelper.get(type, id);
-      console.log('nfft', nft);
+      console.log('nft', nft);
       res.setHeader('Content-Type', 'image/svg+xml');
-      if (type === 'avatar') {
-        res.render('layouts/avatar', {
-          layout: 'avatar.hbs',
-          ...nft,
-          width: width,
-          height: height
-        })
-      }
+      res.render(`layouts/${type}`, {
+        layout: `${type}.hbs`,
+        ...nft,
+        width: width,
+        height: height
+      })
     } else {
       res.status(404).json({ error: 'File not found' })
     }
