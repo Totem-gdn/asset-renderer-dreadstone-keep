@@ -347,27 +347,27 @@
     {{/ifeq}}
 
     {{#ifeq hair_styles 'afro'}}
-           <g transform="translate(50, -65)">
+           <g transform="translate(50, -60)">
                 <path class="human_hair_color"
                     d="M125.24,184.8h-10V175h-10v-50H115V115.2H185v9.62h9.47l.35,40H185.1v10h-10V155.06h-40v9.85h-9.86Z" />
             </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'asymmetrical'}}
-            <g transform="translate(50, -60)">
-                <path class="human_hair_color"
-                    d="M125.24,184.8h-10V175h-10v-50H115V115.2H185v9.62h9.47l.35,40H185.1v10h-10V155.06h-40v9.85h-9.86Z" />
-            </g>
+    {{#ifeq hair_styles 'buzz cut'}}
+                <g id="Buzzcut" transform="translate(175, 85) scale(0.1669)">
+                    <rect id="Front_color" data-name="Front color" width="300" height="60" class="human_hair_color"/>
+                    <rect id="Back_color" data-name="Back color" y="60" width="60" height="120" class="human_skin_color"/>
+                </g>
     {{/ifeq}}
     {{#ifeq hair_styles 'braids'}}
-        <g transform="translate(40, -35)">
+        <g transform="translate(40, -30)">
             <path class="human_hair_color"
                 d="M115,164.73V114.91h9.82v-9.68h59.92v9.62h10v29.85H185V125.17H145v9.59h-10s-.07,20.18-.07,30Z" />
             <path class="darken-hair-color" d="M114.89,165.06v29.67h-9.65V165.06Z" />
             <path class="darken-hair-color" d="M194.74,194.76h-9.68V165.15h9.68Z" />
         </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'buzz cut'}}
-        <g transform="translate(50, -55)">
+    {{#ifeq hair_styles 'asymmetrical'}}
+        <g transform="translate(50, -50)">
             <path class="darken-hair-color" d="M154.94,155.08H145v-10H135v-20h20Z" />
             <path class="human_skin_color" d="M135,145.09h10v10h-9.46a2.26,2.26,0,0,0-.35.34.77.77,0,0,0-.17.43v19h-9.74V145.09Z" />
             <path class="human_hair_color" d="M154.94,155.08v-30h10v30Z" />
@@ -375,7 +375,7 @@
         </g>
     {{/ifeq}}
     {{#ifeq hair_styles 'dreadlocks'}}
-    <g transform="translate(40, -35)">
+    <g transform="translate(40, -30)">
         <path class="human_hair_color" d="M185,120.1h10V180H185V130.08H165v-10Z" />
         <path class="human_hair_color" d="M155,130.08H135V170H125V120.1h30Z" />
         <path class="human_hair_color" d="M105.07,160V120.1h10V160Z" />
@@ -403,7 +403,7 @@
     </g>
     {{/ifeq}}
     {{#ifeq hair_styles 'long'}}
-        <g transform="translate(50, -50)">
+        <g transform="translate(50, -45)">
             <path class="human_hair_color"
                 d="M174.94,184.84V145.1l-39.76,0v9.67h-10v39.85h-20V115.07H115v-9.9h69.9v9.72h10V154.7H184.9s0,33.15,0,40.13h-10Z" />
             <path class="darken-hair-color" d="M174.94,184.84v10H155v-10Z" />
