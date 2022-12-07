@@ -42,6 +42,9 @@
             .human_hair_color {
                 fill: {{human_hair_color}};
             }
+            .human_hair_color_lighten {
+                fill: {{human_hair_color_lighten}};
+            }
 
             .human_skin_color {
                 fill: {{human_skin_color}};
@@ -355,7 +358,7 @@
     {{#ifeq hair_styles 'buzz cut'}}
                 <g id="Buzzcut" transform="translate(175, 85) scale(0.1669)">
                     <rect id="Front_color" data-name="Front color" width="300" height="60" class="human_hair_color"/>
-                    <rect id="Back_color" data-name="Back color" y="60" width="60" height="120" class="human_skin_color"/>
+                    <rect id="Back_color" data-name="Back color" y="60" width="60" height="120" class="darken-hair-color"/>
                 </g>
     {{/ifeq}}
     {{#ifeq hair_styles 'braids'}}
@@ -367,11 +370,11 @@
         </g>
     {{/ifeq}}
     {{#ifeq hair_styles 'asymmetrical'}}
-        <g transform="translate(50, -50)">
+        <g transform="translate(50, -55)">
             <path class="darken-hair-color" d="M154.94,155.08H145v-10H135v-20h20Z" />
-            <path class="human_skin_color" d="M135,145.09h10v10h-9.46a2.26,2.26,0,0,0-.35.34.77.77,0,0,0-.17.43v19h-9.74V145.09Z" />
-            <path class="human_hair_color" d="M154.94,155.08v-30h10v30Z" />
-            <path class="human_skin_color" d="M165,155.08v-10h9.82v10Z" />
+            <path class="human_hair_color" d="M135,145.09h10v10h-9.46a2.26,2.26,0,0,0-.35.34.77.77,0,0,0-.17.43v19h-9.74V145.09Z" />
+            <path class="darken-hair-color" d="M154.94,155.08v-30h10v30Z" />
+            <path class="human_hair_color" d="M165,155.08v-10h9.82v10Z" />
         </g>
     {{/ifeq}}
     {{#ifeq hair_styles 'dreadlocks'}}
