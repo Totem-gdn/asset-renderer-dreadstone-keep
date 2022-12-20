@@ -12,8 +12,6 @@ class NFTController {
     if (type) {
       const nft = await nftHelper.get(type, id);
       console.log('nft', nft);
-      nft.hair_styles= 'asymmetrical'
-      
       res.setHeader('Content-Type', 'image/svg+xml');
       res.render(`layouts/${type}`, {
         layout: `${type}.hbs`,

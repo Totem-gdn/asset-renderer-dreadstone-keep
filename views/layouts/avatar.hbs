@@ -52,9 +52,9 @@
         </style>
     </defs>
     {{!-- fat --}}
-    {{#ifeq body_type 0}}
+    {{#ifeq body_type 'Fat'}}
         {{!-- muscular/buff --}}
-        {{#ifeq body_strength 0}}
+        {{#ifeq body_strength 'Muscular'}}
         <defs>
             <style>
                 .body-fat-m1 {
@@ -124,7 +124,7 @@
         </g>
         {{/ifeq}}
         {{!-- wimp --}}
-        {{#ifeq body_strength 1}}
+        {{#ifeq body_strength 'Wimp'}}
         <defs>
             <style>
                 .body-fat1 {
@@ -198,9 +198,9 @@
         {{/ifeq}}
     {{/ifeq}}
     {{!-- thin --}}
-    {{#ifeq body_type 1}}
+    {{#ifeq body_type 'Thin'}}
         {{!-- muscular/buff --}}
-        {{#ifeq body_strength 0}}
+        {{#ifeq body_strength 'Muscular'}}
         <defs>
             <style>
                 .body-skinny-m1 {
@@ -275,7 +275,7 @@
         {{/ifeq}}
 
         {{!-- wimp --}}
-        {{#ifeq body_strength 1}}
+        {{#ifeq body_strength 'Wimp'}}
         <defs>
             <style>
                 .body-skinny1 {
@@ -349,35 +349,37 @@
         {{/ifeq}}
     {{/ifeq}}
 
-    {{#ifeq hair_styles 'afro'}}
-           <g transform="translate(50, -60)">
+    {{#ifeq hair_styles 'Afro'}}
+           <g transform="translate(50, -55)">
                 <path class="human_hair_color"
                     d="M125.24,184.8h-10V175h-10v-50H115V115.2H185v9.62h9.47l.35,40H185.1v10h-10V155.06h-40v9.85h-9.86Z" />
             </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'buzz cut'}}
-                <g id="Buzzcut" transform="translate(175, 85) scale(0.1669)">
+    {{#ifeq hair_styles 'Buzzcut'}}  {{!-- done --}}
+                <g id="Buzzcut" transform="translate(175, 90) scale(0.1669)">
                     <rect id="Front_color" data-name="Front color" width="300" height="60" class="human_hair_color"/>
                     <rect id="Back_color" data-name="Back color" y="60" width="60" height="120" class="darken-hair-color"/>
                 </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'braids'}}
-        <g transform="translate(40, -30)">
+    {{#ifeq hair_styles 'Braids'}}  {{!-- done --}}
+        <g transform="translate(40, -25)">
             <path class="human_hair_color"
                 d="M115,164.73V114.91h9.82v-9.68h59.92v9.62h10v29.85H185V125.17H145v9.59h-10s-.07,20.18-.07,30Z" />
             <path class="darken-hair-color" d="M114.89,165.06v29.67h-9.65V165.06Z" />
             <path class="darken-hair-color" d="M194.74,194.76h-9.68V165.15h9.68Z" />
         </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'asymmetrical'}}
+    {{#ifeq hair_styles 'Asymmetrical'}} {{!-- done --}}
         <g transform="translate(47.6, -57) scale(1.015)">
-            <path class="darken-hair-color" d="M154.94,155.08H145v-10H135v-20h20Z" />
+            <path class="human_hair_color" d="M154.94,155.08H145v-10H135v-20h20Z" />
+            <path fill="#000" opacity="0.6" d="M154.94,155.08H145v-10H135v-20h20Z" />
             <path class="human_hair_color" d="M135,145.09h10v10h-9.46a2.26,2.26,0,0,0-.35.34.77.77,0,0,0-.17.43v19h-9.74V145.09Z" />
-            <path class="darken-hair-color" d="M154.94,155.08v-30h10v30Z" />
+            <path class="human_hair_color" d="M154.94,155.08v-30h10v30Z" />
+            <path fill="#000" opacity="0.3" d="M154.94,155.08v-30h10v30Z" />
             <path class="human_hair_color" d="M165,155.08v-10h9.82v10Z" />
         </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'dreadlocks'}}
+    {{#ifeq hair_styles 'Dreadlocks'}} {{!-- done --}}
     <g transform="translate(40, -30)">
         <path class="human_hair_color" d="M185,120.1h10V180H185V130.08H165v-10Z" />
         <path class="human_hair_color" d="M155,130.08H135V170H125V120.1h30Z" />
@@ -389,38 +391,41 @@
         <path class="darken-hair-color" d="M174.83,190.14v19.71h-9.64V190.14Z" />
         <path class="darken-hair-color" d="M115.05,100.13v-10l10,0v10Z" />
         <path class="darken-hair-color" d="M115.05,110.11h-10v-10h10Z" />
-        <path class="lighten-hair-color" d="M115.05,110.11v-10h10v10Z" />
+        <path fill="#e8b408" d="M115.05,110.11v-10h10v10Z" />
         <path class="human_hair_color" d="M115.05,110.11h10v10h-10Z" />
         <path class="human_hair_color" d="M165,110.11v10H155v-10Z" />
         <path class="darken-hair-color" d="M155,120.1h10v10H155Z" />
-        <path class="lighten-hair-color" d="M115.05,170h-10V160h10Z" />
+        <path fill="#e8b408" d="M115.05,170h-10V160h10Z" />
         <path class="darken-hair-color" d="M135,170h9.9v10H135Z" />
         <path class="human_hair_color" d="M135,180v10H125V180Z" />
-        <path class="lighten-hair-color" d="M185,190V180h10v10Z" />
+        <path fill="#e8b408" d="M185,190V180h10v10Z" />
         <path class="darken-hair-color" d="M125,200h-10V190h10Z" />
-        <path class="lighten-hair-color" d="M125,200V190h10v10Z" />
+        <path fill="#e8b408" d="M125,200V190h10v10Z" />
         <path class="human_hair_color" d="M185,190h10v10H185Z" />
         <path class="human_hair_color" d="M125,200h10v9.82H125Z" />
         <path class="darken-hair-color" d="M115.05,170V120.1h10V180h-10Z" />
-        <path class="lighten-hair-color" d="M125,180V170h10v10Z" />
+        <path fill="#e8b408" d="M125,180V170h10v10Z" />
     </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'long'}}
-        <g transform="translate(50, -45)">
-            <path class="human_hair_color"
-                d="M174.94,184.84V145.1l-39.76,0v9.67h-10v39.85h-20V115.07H115v-9.9h69.9v9.72h10V154.7H184.9s0,33.15,0,40.13h-10Z" />
-            <path class="darken-hair-color" d="M174.94,184.84v10H155v-10Z" />
+    {{#ifeq hair_styles 'Long'}} {{!-- done --}}
+        <g transform="translate(34, -41)  scale(0.805)">
+           <path id="path0"
+            d="M162.000 155.800 L 162.000 162.000 155.800 162.000 L 149.600 162.000 149.600 200.000 L 149.600 238.000 162.400 238.000 L 175.200 238.000 175.200 213.010 L 175.200 188.020 181.500 187.910 L 187.800 187.800 187.910 181.500 L 188.020 175.200 212.610 175.200 L 237.200 175.200 237.201 196.700 C 237.201 208.525,237.320 222.655,237.465 228.100 L 237.728 238.000 244.064 238.000 L 250.400 238.000 250.400 200.000 L 250.400 162.000 244.200 162.000 L 238.000 162.000 238.000 155.800 L 238.000 149.600 200.000 149.600 L 162.000 149.600 162.000 155.800 "
+            stroke="none" class="human_hair_color" fill-rule="evenodd"></path>
+        <path id="path1"
+            d="M212.000 230.767 C 212.000 234.049,212.109 237.019,212.243 237.367 C 212.457 237.926,213.961 238.000,225.043 238.000 L 237.600 238.000 237.600 231.400 L 237.600 224.800 224.800 224.800 L 212.000 224.800 212.000 230.767 "
+            stroke="none" class="darken-hair-color" fill-rule="evenodd"></path>
         </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'ponytail'}}
-        <g transform="translate(40, -40)">
+    {{#ifeq hair_styles 'Ponytail'}} {{!-- done --}}
+        <g transform="translate(40, -34.5)">
             <path class="human_hair_color"
                 d="M114.93,154.92v-30h9.82v-9.7h59.9v9.59h10.19l0,29.9h-9.94V135.15H144.93v9.6H135l0,20.16H114.93Z" />
             <path class="darken-hair-color" d="M114.93,154.92v10h10v19.86H105.16V154.92Z" />
         </g>
     {{/ifeq}}
-    {{#ifeq hair_styles 'short'}}
-        <g transform="translate(50, -50)">
+   {{#ifeq hair_styles 'Short'}} {{!-- done --}}
+        <g transform="translate(50, -45)">
             <path class="human_hair_color" d="M115.08,155.07V135.14h10v-9.93h59.88v20.87H175v-1H155.09v10h-40Z" />
             <path class="darken-hair-color" d="M115.08,155.07h20v9.77l-9.82,0v9.93H115.08Z" />
             <path class="darken-hair-color" d="M175,146.08h9.94v18.75H175Z" />

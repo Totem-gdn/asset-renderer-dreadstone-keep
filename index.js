@@ -28,7 +28,6 @@ app.set('views', path.join(__dirname, "views"));
 
 
 app.use('/', require('./routes/index'))
-app.use('/resources',express.static('./resources'))
 
 const host = process.env.host || '0.0.0.0'
 const port = process.env.port || 3000
