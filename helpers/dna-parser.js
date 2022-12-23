@@ -1,6 +1,7 @@
 'use strict'
 const { DNAParser, ContractHandler } = require('totem-dna-parser')
 const totemCommonFiles = require('totem-common-files')
+const maxValue = 4294967295;
 
 
 class NFT {
@@ -29,6 +30,13 @@ class NFT {
       for (const key in properties) {
         if (Object.hasOwnProperty.call(properties, key)) {
           settings[jsonProp[key]] = parser.getField(properties[key]);
+        }
+      }
+
+      for (const key in settings) {
+        if (Object.hasOwnProperty.call(settings, key) && key === 'range_nd') {
+          settings.range_nd = Math.round((settings.range_nd / maxValue) * 100);
+          settings['weapon_type'] = settings.range_nd >= 50 ? 'Axe' : 'Dagger';
         }
       }
       return type === 'avatar' ? this.generateAvatarJson(settings) : settings;
