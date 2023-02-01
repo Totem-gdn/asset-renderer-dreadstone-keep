@@ -44,7 +44,7 @@ class NFT {
       for (const key in settings) {
         if (Object.hasOwnProperty.call(settings, key) && key === 'range_nd') {
           settings.range_nd = Math.round((settings.range_nd / maxValue) * 100);
-          settings['weapon_type'] = settings.range_nd >= 50 ? 'Axe' : 'Dagger';
+          settings['weapon_type'] = settings.range_nd < 50 ? 'Axe' : 'Dagger';
         }
       }
       return type === 'avatar' ? this.generateAvatarJson(settings) : settings;
