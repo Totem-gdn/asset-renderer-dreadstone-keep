@@ -6,8 +6,12 @@
  width="{{width}}" height="{{height}}" viewBox="0 0 400 350"
  preserveAspectRatio="xMidYMid meet">
 
-
+    {{#ifeq glow 'true'}}
     <g style="filter: drop-shadow(0px 0px 150px {{glow_color}});">
+    {{/ifeq}}
+    {{#ifeq glow 'false'}}
+    <g>
+    {{/ifeq}}
 
     <defs>
         <style>

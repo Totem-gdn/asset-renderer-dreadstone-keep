@@ -5,8 +5,8 @@ const nftHelper = require('../../helpers/dna-parser')
 class NFTController {
   async get (req, res, next) {
     const { type, id } = req.params;
-    const { width = 200, height = 200 } = req.query;
-    console.log('type id', type, id);
+    const { width = 500, height = 500, glow = 'true' } = req.query;
+
     if (!type || !id) {
       res.status(404).json({ error: 'Wrong format' })
     }
@@ -21,6 +21,7 @@ class NFTController {
       res.render(`layouts/${type}`, {
         layout: `${type}.hbs`,
         ...nft,
+        glow,
         width: width,
         height: height
       })
