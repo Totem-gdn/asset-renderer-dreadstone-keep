@@ -1,9 +1,9 @@
-FROM node:lts-alpine
+FROM node:lts-buster
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-RUN apk update && apk add --no-cache python3 py3-pip build-base vips-dev
+RUN apt-get update && apt-get install -y build-essential python3 python3-pip libvips-dev 
 
 WORKDIR /usr/src/asset-generator
 
